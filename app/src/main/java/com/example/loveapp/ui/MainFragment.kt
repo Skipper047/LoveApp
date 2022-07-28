@@ -32,6 +32,9 @@ class MainFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         onClick()
+        binding.history.setOnClickListener {
+            findNavController().navigate(R.id.historyFragment)
+        }
     }
 
     private fun doRequest(firstName:String,secondName:String){
@@ -42,6 +45,7 @@ class MainFragment : Fragment() {
                 val loveModel: LoveModel = response.body()!!
                 val bundle = Bundle()
                 bundle.putSerializable("result",loveModel)
+                parentFragmentManager.setFragmentResult("love_model", bundle)
                 findNavController().navigate(R.id.resultFragment, bundle)
             }
 

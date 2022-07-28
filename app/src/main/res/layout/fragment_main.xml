@@ -68,6 +68,32 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/planet_benson"/>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/history"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/ivHistory"
+            app:layout_constraintEnd_toEndOf="@id/tvHistory"
+            app:layout_constraintStart_toStartOf="@id/tvHistory"
+            app:layout_constraintBottom_toTopOf="@id/tvHistory"
+            android:background="@drawable/ic_baseline_grading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:id="@+id/tvHistory"
+            android:text="History"
+            android:textSize="16sp"
+            android:textColor="#FC05B6"
+            android:paddingBottom="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
 
 
 
