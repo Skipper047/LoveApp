@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="32dp"
+    android:layout_height="match_parent">
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/lottieV"
+        android:layout_width="350dp"
+        android:layout_height="350dp"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        android:maxHeight="300dp"
+        android:maxWidth="300dp"
+        app:lottie_rawRes="@raw/lf30_editor_teggzeyg"/>
+<!--    <ImageView-->
+<!--        android:id="@+id/ImageView"-->
+<!--        android:layout_width="300dp"-->
+<!--        android:src="@mipmap/ic_launcher_round"-->
+<!--        android:layout_height="300dp"/>-->
+    <TextView
+        android:id="@+id/textTitle"
+        android:text="Title"
+        android:textStyle="bold"
+        android:textSize="44sp"
+        android:gravity="center"
+        android:layout_marginTop="64dp"
+        android:layout_marginBottom="32dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <TextView
+        android:id="@+id/textDesc"
+        android:text="Description"
+        android:gravity="center"
+        android:textSize="32sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <Button
+        android:id="@+id/btnStart"
+        android:text="Start"
+        android:textStyle="bold"
+        android:textSize="24sp"
+        android:backgroundTint="@color/teal_200"
+        android:layout_marginTop="24dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+</androidx.appcompat.widget.LinearLayoutCompat>

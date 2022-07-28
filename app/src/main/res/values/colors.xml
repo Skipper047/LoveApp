@@ -13,4 +13,7 @@
     <color name="red2">#73F40808</color>
     <color name="pinky">#FA00EE</color>
     <color name="pinky2">#d42060</color>
+    <color name="gray">#C8C5C5</color>
+    <color name="colorPrimary">#6FB6F4</color>
+    <color name="green">#15EC8F</color>
 </resources>

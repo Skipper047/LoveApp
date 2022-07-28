@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import com.example.loveapp.APP
 import com.example.loveapp.databinding.FragmentResultBinding
 import com.example.loveapp.model.LoveModel
 import java.util.*
@@ -37,6 +38,7 @@ class ResultFragment : Fragment() {
             tvResult.text = lm?.result
 
         }
+
         setupAnimation()
 
     }

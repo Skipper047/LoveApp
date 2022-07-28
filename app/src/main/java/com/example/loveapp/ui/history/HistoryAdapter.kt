@@ -32,4 +32,9 @@ class HistoryAdapter: RecyclerView.Adapter<HistoryAdapter.ViewHolder>() {
         list.add(loveModel)
         notifyDataSetChanged()
     }
+
+    fun addItems(list: List<LoveModel>) {
+        this.list.addAll(list)
+        notifyDataSetChanged()
+    }
 }

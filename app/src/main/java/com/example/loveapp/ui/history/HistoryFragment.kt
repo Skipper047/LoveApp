@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.example.loveapp.APP
 import com.example.loveapp.R
 import com.example.loveapp.databinding.FragmentHistoryBinding
 import com.example.loveapp.databinding.FragmentResultBinding
@@ -20,6 +21,8 @@ class HistoryFragment : Fragment() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         adapter = HistoryAdapter()
+        val list = APP.database.loveModelDao().getAll()
+        adapter.addItems(list)
     }
 
     override fun onCreateView(
@@ -36,7 +39,7 @@ class HistoryFragment : Fragment() {
         parentFragmentManager.setFragmentResultListener("love_model", viewLifecycleOwner){ requestKey,
                                                                                            bundle->
             val loveModel = bundle.getSerializable("result") as LoveModel
-            adapter.addItem(loveModel)
+//            adapter.addItem(loveModel)
         }
 
         binding.recycleView.adapter = adapter

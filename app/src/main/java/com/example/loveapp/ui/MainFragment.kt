@@ -40,9 +40,10 @@ class MainFragment : Fragment() {
     private fun doRequest(firstName:String,secondName:String){
         APP.api.calculate(firstName,secondName).enqueue(object : Callback<LoveModel>{
             override fun onResponse(call: Call<LoveModel>, response: Response<LoveModel>) {
-                val list = arrayListOf(LoveModel(response.body()!!.firstName,response.body()!!.secondName,response.body()!!.percentage,
+                val list = arrayListOf(LoveModel(0,response.body()!!.firstName,response.body()!!.secondName,response.body()!!.percentage,
                     response.body()!!.result))
                 val loveModel: LoveModel = response.body()!!
+                APP.database.loveModelDao().insert(loveModel)
                 val bundle = Bundle()
                 bundle.putSerializable("result",loveModel)
                 parentFragmentManager.setFragmentResult("love_model", bundle)

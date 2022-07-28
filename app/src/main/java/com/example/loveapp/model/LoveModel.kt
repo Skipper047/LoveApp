@@ -1,10 +1,14 @@
 package com.example.loveapp.model
 
+import androidx.room.Entity
+import androidx.room.PrimaryKey
 import com.google.gson.annotations.SerializedName
 import java.io.Serializable
-
+@Entity
 data class LoveModel(
 
+    @PrimaryKey(autoGenerate = true)
+    val id: Int,
     @SerializedName("fname")
     val firstName:String,
     @SerializedName("sname")
